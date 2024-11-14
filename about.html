@@ -7,6 +7,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- AOS animations -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
@@ -14,7 +16,7 @@
 <!-- Header -->
 <header>
     <div class="bx bx-menu" id="menu-icon"></div>
-    <ul class="navlist">
+    <ul class="navlist" id="navlist">
         <li><a href="index.html#home">Home</a></li>
         <li><a href="about.html#about">About</a></li>
         <li><a href="skills.html#skills">Skills</a></li>
@@ -46,6 +48,14 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
+
+  // Toggle menu for mobile
+  const menuIcon = document.getElementById('menu-icon');
+  const navlist = document.getElementById('navlist');
+
+  menuIcon.addEventListener('click', () => {
+    navlist.classList.toggle('active');
+  });
 </script>
 
 </body>
