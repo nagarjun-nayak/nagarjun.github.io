@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills - Nagarjun Nayak's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
 
 <!-- Include Header -->
 <header>
   <div class="bx bx-menu" id="menu-icon"></div>
-  <ul class="navlist">
+  <!-- Add id="navlist" here -->
+  <ul class="navlist" id="navlist">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="skills.html">Skills</a></li>
@@ -37,6 +39,17 @@
   <small class="message">Thanks for visiting and happy coding!</small>
   <small class="copyright">&copy; Copyright 2024. All rights reserved.</small>
 </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
 
+  // Toggle menu for mobile
+  const menuIcon = document.getElementById('menu-icon');
+  const navlist = document.getElementById('navlist');
+
+  menuIcon.addEventListener('click', () => {
+    navlist.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
